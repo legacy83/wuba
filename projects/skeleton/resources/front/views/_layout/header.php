@@ -32,7 +32,7 @@
             <ul class="nav nav-pills pull-right">
                 <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>">Home</a></li>
                 <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>?r=@todo">@todo</a></li>
-                <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>?r=@todo">@todo</a></li>
+                <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>?r=@debug">@debug</a></li>
             </ul>
         </nav>
         <h3 class="text-muted">Wuba Front</h3>

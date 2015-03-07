@@ -39,6 +39,11 @@ final class View
      *
      */
 
+    static function core()
+    {
+        return new View( CORE_VIEWS_DIR );
+    }
+
     static function front()
     {
         return new View( FRONT_VIEWS_DIR );

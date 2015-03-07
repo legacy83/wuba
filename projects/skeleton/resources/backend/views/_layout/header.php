@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="<?php echo PUBLIC_URL; ?>/assets/css/frontStyles.css">
+    <link rel="stylesheet" href="<?php echo PUBLIC_URL; ?>/assets/css/backendStyles.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,8 +32,16 @@
             <ul class="nav nav-pills pull-right">
                 <li role="presentation"><a href="<?php echo BACKEND_URL; ?>">Dashboard</a></li>
                 <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
-                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
-                <?php \Core\View\View::backend()->layout( 'inc/topMenu' ); ?>
+                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@debug">@debug</a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        @menu <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@debug">@debug</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <h3 class="text-muted">Wuba Bakend</h3>

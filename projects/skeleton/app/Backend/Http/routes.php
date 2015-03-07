@@ -33,15 +33,16 @@ $routes[ 'dashboard/index' ] = $routes[ 'dashboard' ];
 $routes[ '@todo' ] = function () {
 
     View::backend()->layout( 'header' );
-    View::backend()->partials( 'debug/todo' );
+    View::core()->partials( 'fake/todo' );
     View::backend()->layout( 'footer' );
 
 };
 
-$routes[ '@postSubmit' ] = function () {
+$routes[ '@debug' ] = function () {
 
     View::backend()->layout( 'header' );
-    View::backend()->partials( 'debug/postSubmit' );
+    View::core()->partials( 'fake/debug' );
+    View::core()->partials( 'debug/request' );
     View::backend()->layout( 'footer' );
 
 };

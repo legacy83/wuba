@@ -23,9 +23,11 @@ define( 'BACKEND_URL', "//$backendUrl" );
 define( 'FRONT_PUBLIC_DIR', "$appDir/../public" );
 define( 'BACKEND_PUBLIC_DIR', "$appDir/../public/backend" );
 
-define( 'FRONT_RESOURCES_DIR', "$appDir/../resources" );
+define( 'CORE_RESOURCES_DIR', "$appDir/../resources/core" );
+define( 'FRONT_RESOURCES_DIR', "$appDir/../resources/front" );
 define( 'BACKEND_RESOURCES_DIR', "$appDir/../resources/backend" );
 
+define( 'CORE_VIEWS_DIR', "$appDir/../resources/core/views" );
 define( 'FRONT_VIEWS_DIR', "$appDir/../resources/front/views" );
 define( 'BACKEND_VIEWS_DIR', "$appDir/../resources/backend/views" );
 

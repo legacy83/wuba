@@ -33,15 +33,16 @@ $routes[ 'site/index' ] = $routes[ 'site' ];
 $routes[ '@todo' ] = function () {
 
     View::front()->layout( 'header' );
-    View::front()->partials( 'debug/todo' );
+    View::core()->partials( 'fake/todo' );
     View::front()->layout( 'footer' );
 
 };
 
-$routes[ '@postSubmit' ] = function () {
+$routes[ '@debug' ] = function () {
 
     View::front()->layout( 'header' );
-    View::front()->partials( 'debug/postSubmit' );
+    View::core()->partials( 'fake/debug' );
+    View::core()->partials( 'debug/request' );
     View::front()->layout( 'footer' );
 
 };

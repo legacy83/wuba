@@ -8,26 +8,26 @@ ini_set( 'display_errors', 1 );
  *
  */
 
-$baseDir = __DIR__;
+$appDir = __DIR__;
 $frontUrl = 'www.192.168.27.14.xip.io';
 $backendUrl = 'http://www.192.168.27.14.xip.io/backend';
 
-define( 'APP_DIR', $baseDir );
-define( 'CORE_APP_DIR', "$baseDir/Core" );
-define( 'FRONT_APP_DIR', "$baseDir/Front" );
-define( 'BACKEND_APP_DIR', "$baseDir/Backend" );
+define( 'APP_DIR', $appDir );
+define( 'CORE_APP_DIR', "$appDir/Core" );
+define( 'FRONT_APP_DIR', "$appDir/Front" );
+define( 'BACKEND_APP_DIR', "$appDir/Backend" );
 
 define( 'FRONT_URL', "//$frontUrl" );
 define( 'BACKEND_URL', "//$backendUrl" );
 
-define( 'FRONT_PUBLIC_DIR', "$baseDir/public" );
-define( 'BACKEND_PUBLIC_DIR', "$baseDir/public/backend" );
+define( 'FRONT_PUBLIC_DIR', "$appDir/../public" );
+define( 'BACKEND_PUBLIC_DIR', "$appDir/../public/backend" );
 
-define( 'FRONT_RESOURCES_DIR', "$baseDir/resources" );
-define( 'BACKEND_RESOURCES_DIR', "$baseDir/resources/backend" );
+define( 'FRONT_RESOURCES_DIR', "$appDir/../resources" );
+define( 'BACKEND_RESOURCES_DIR', "$appDir/../resources/backend" );
 
-define( 'FRONT_VIEWS_DIR', "$baseDir/resources/views" );
-define( 'BACKEND_VIEWS_DIR', "$baseDir/resources/backend/views" );
+define( 'FRONT_VIEWS_DIR', "$appDir/../resources/front/views" );
+define( 'BACKEND_VIEWS_DIR', "$appDir/../resources/backend/views" );
 
 /*
  * SPL Autoloader

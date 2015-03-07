@@ -35,6 +35,7 @@ wuba_apache2_vhost() {
 
 wuba_apache2_vhost "$DOMAIN"
 wuba_apache2_vhost "www.$DOMAIN"
+wuba_apache2_vhost "admin.$DOMAIN"
 
 ###########################################################
 # MySQL Databases

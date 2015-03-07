@@ -1,5 +1,7 @@
 <?php
 
+use \Core\View\View;
+
 /*
  * Routes
  * ------
@@ -16,7 +18,7 @@ $routes = [ ];
 
 $routes[ 'site' ] = function () {
 
-    echo "Site OK!";
+    View::front()->make( 'site/index' );
 
 };
 

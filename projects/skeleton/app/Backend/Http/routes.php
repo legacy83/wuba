@@ -1,5 +1,7 @@
 <?php
 
+use \Core\View\View;
+
 /*
  * Backend Routes
  * --------------
@@ -11,11 +13,12 @@ $routes = [ ];
 /*
  * Dashboard Routes
  * ----------------
+ *
  */
 
 $routes[ 'dashboard' ] = function () {
 
-    echo "Dashboard OK!";
+    View::backend()->make( 'dashboard/index' );
 
 };
 

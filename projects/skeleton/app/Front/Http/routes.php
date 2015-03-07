@@ -25,6 +25,28 @@ $routes[ 'site' ] = function () {
 $routes[ 'site/index' ] = $routes[ 'site' ];
 
 /*
+ * Debug Routes
+ * ------------
+ *
+ */
+
+$routes[ '@todo' ] = function () {
+
+    View::front()->layout( 'header' );
+    View::front()->partials( 'debug/todo' );
+    View::front()->layout( 'footer' );
+
+};
+
+$routes[ '@postSubmit' ] = function () {
+
+    View::front()->layout( 'header' );
+    View::front()->partials( 'debug/postSubmit' );
+    View::front()->layout( 'footer' );
+
+};
+
+/*
  * Apply Routing
  * -------------
  *

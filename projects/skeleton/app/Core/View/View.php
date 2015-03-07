@@ -23,6 +23,16 @@ final class View
         include( $this->viewsDir . "/$view.php" );
     }
 
+    function layout( $layout, $models = array() )
+    {
+        $this->make( "/_layout/$layout", $models );
+    }
+
+    function partials( $partial, $models = array() )
+    {
+        $this->make( "/_partials/$partial", $models );
+    }
+
     /*
      * View Static Factories
      * ---------------------

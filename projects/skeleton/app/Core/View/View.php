@@ -6,12 +6,6 @@ final class View
 {
     private $viewsDir;
 
-    /*
-     * View Construct
-     * --------------
-     *
-     */
-
     private function __construct( $viewsDir )
     {
         $this->viewsDir = $viewsDir;
@@ -30,8 +24,8 @@ final class View
     }
 
     /*
-     * Static Factories
-     * ----------------
+     * View Static Factories
+     * ---------------------
      *
      */
 

@@ -13,18 +13,45 @@ class Route
         $this->default = $default;
     }
 
+    /*
+     * Route Functionality
+     * -------------------
+     *
+     */
+
     function apply()
     {
-        if ( isset( $_REQUEST[ 'r' ] ) ) {
+        if ( $r = static::current() ) {
 
-            $router = $_REQUEST[ 'r' ];
-            $this->routes[ $router ]();
+            $this->routes[ $r ]();
 
         } else {
 
             $this->routes[ $this->default ]();
 
         }
+    }
+
+    /*
+     * Route Static Functionality
+     * --------------------------
+     *
+     */
+
+    static function current()
+    {
+        return isset( $_REQUEST[ 'r' ] ) ? $_REQUEST[ 'r' ] : NULL;
+    }
+
+    /*
+     * Route Magic Methods
+     * -------------------
+     *
+     */
+
+    function __invoke()
+    {
+        $this->apply();
     }
 
 }

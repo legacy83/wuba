@@ -41,5 +41,4 @@
         </div>
     </div>
 
-<?php \Core\View\View::front()->partials( 'debug/postSubmit' ); ?>
 <?php \Core\View\View::front()->layout( 'footer' ); ?>

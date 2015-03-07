@@ -10,14 +10,14 @@ ini_set( 'display_errors', 1 );
 
 $appDir = __DIR__;
 $frontUrl = 'www.192.168.27.14.xip.io';
-$backendUrl = 'http://www.192.168.27.14.xip.io/backend';
+$backendUrl = 'admin.192.168.27.14.xip.io';
 
 define( 'APP_DIR', $appDir );
 define( 'CORE_APP_DIR', "$appDir/Core" );
 define( 'FRONT_APP_DIR', "$appDir/Front" );
 define( 'BACKEND_APP_DIR', "$appDir/Backend" );
 
-define( 'FRONT_URL', "//$frontUrl" );
+define( 'PUBLIC_URL', "//$frontUrl" );
 define( 'BACKEND_URL', "//$backendUrl" );
 
 define( 'FRONT_PUBLIC_DIR', "$appDir/../public" );

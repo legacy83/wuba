@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="<?php echo FRONT_URL; ?>/assets/images/favicon.ico">
+    <link rel="icon" href="<?php echo PUBLIC_URL; ?>/assets/images/favicon.ico">
 
-    <title>Wuba Front</title>
+    <title>Wuba Backend</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -30,11 +30,12 @@
     <div class="header">
         <nav>
             <ul class="nav nav-pills pull-right">
-                <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>">Home</a></li>
-                <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>?r=@todo">@todo</a></li>
-                <li role="presentation"><a href="<?php echo PUBLIC_URL; ?>?r=@todo">@todo</a></li>
+                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>">Dashboard</a></li>
+                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
+                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
+                <?php \Core\View\View::backend()->layout( 'inc/topMenu' ); ?>
             </ul>
         </nav>
-        <h3 class="text-muted">Wuba Front</h3>
+        <h3 class="text-muted">Wuba Bakend</h3>
     </div>
 

@@ -25,6 +25,28 @@ $routes[ 'dashboard' ] = function () {
 $routes[ 'dashboard/index' ] = $routes[ 'dashboard' ];
 
 /*
+ * Debug Routes
+ * ------------
+ *
+ */
+
+$routes[ '@todo' ] = function () {
+
+    View::backend()->layout( 'header' );
+    View::backend()->partials( 'debug/todo' );
+    View::backend()->layout( 'footer' );
+
+};
+
+$routes[ '@postSubmit' ] = function () {
+
+    View::backend()->layout( 'header' );
+    View::backend()->partials( 'debug/postSubmit' );
+    View::backend()->layout( 'footer' );
+
+};
+
+/*
  * Apply Routing
  * -------------
  *

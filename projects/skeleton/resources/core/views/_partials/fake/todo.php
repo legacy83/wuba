@@ -1,8 +1,8 @@
-<div class="row marketing">
+<div class="jumbotron">
+    <h1>fake :: @todo</h1>
+</div>
 
-    <div class="jumbotron">
-        <h1>fake :: @todo</h1>
-    </div>
+<div class="row marketing">
 
     <div class="col-lg-6">
 

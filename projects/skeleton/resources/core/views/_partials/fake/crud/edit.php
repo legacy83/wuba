@@ -1,34 +1,52 @@
-<div class="row crud">
+<h2 class="jumbotron">Edit @todo</h2>
+
+<div class="row">
 
     <div class="col-lg-12">
 
-        <h2>Alterar (??? Model ???)</h2>
-
-        <form method="post" action="<?php echo htmlspecialchars( $_SERVER[ "PHP_SELF" ] ); ?>">
+        <form
+            method="post"
+            class="form-horizontal"
+            action="<?php echo htmlspecialchars( $_SERVER[ "REQUEST_URI" ] ); ?>">
 
             <input type="hidden" name="id" value="<?php echo $_GET[ 'id' ]; ?>">
 
             <div class="form-group">
-                <label for="idInput">ID</label>
-                <input type="number" value="<?php echo $_GET[ 'id' ]; ?>" class="form-control" id="idInput" disabled>
+
+                <label for="inputField1" class="col-sm-2 control-label">@todo</label>
+
+                <div class="col-sm-10">
+                    <input type="text" name="inputField1" class="form-control" id="inputField1" placeholder="@todo">
+                </div>
+
             </div>
 
             <div class="form-group">
-                <label for="field1Input">??????</label>
-                <input type="text" name="field1" class="form-control" id="field1Input" placeholder="Informe o ??????">
+
+                <label for="inputField2" class="col-sm-2 control-label">@todo</label>
+
+                <div class="col-sm-10">
+                    <input type="text" name="inputField2" class="form-control" id="inputField2" placeholder="@todo">
+                </div>
+
             </div>
 
             <div class="form-group">
-                <label for="field2Input">??????</label>
-                <input type="text" name="field2" class="form-control" id="field2Input" placeholder="Informe o ??????">
+
+                <label for="inputField3" class="col-sm-2 control-label">@todo</label>
+
+                <div class="col-sm-10">
+                    <input type="text" name="inputField3" class="form-control" id="inputField3" placeholder="@todo">
+                </div>
+
             </div>
 
             <div class="form-group">
-                <label for="field3Input">??????</label>
-                <input type="text" name="field3" class="form-control" id="field3Input" placeholder="Informe o ??????">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" name="editSubmit" class="btn btn-default" value="Cancel">
+                    <input type="submit" name="editSubmit" class="btn btn-primary" value="Save">
+                </div>
             </div>
-
-            <input type="submit" name="editSubmit" class="btn btn-default" value="Salvar">
 
         </form>
 

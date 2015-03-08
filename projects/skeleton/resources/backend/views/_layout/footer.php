@@ -1,3 +1,5 @@
+<?php \Core\View\View::core()->partials( 'debug/request' ); ?>
+
 <footer class="footer">
     <p>&copy; Wuba 2015</p>
 </footer>

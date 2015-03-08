@@ -31,15 +31,31 @@
         <nav>
             <ul class="nav nav-pills pull-right">
                 <li role="presentation"><a href="<?php echo BACKEND_URL; ?>">Dashboard</a></li>
-                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
-                <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@debug">@debug</a></li>
                 <li role="presentation" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                        @menu <span class="caret"></span>
+                        @one <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@todo</a></li>
-                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@debug">@debug</a></li>
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=foo">@foo</a></li>
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=bar">@bar</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        @two <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=foo">@foo</a></li>
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=bar">@bar</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        @jhon_doe <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@my_profile</a></li>
+                        <li role="presentation"><a href="<?php echo BACKEND_URL; ?>?r=@todo">@logout</a></li>
                     </ul>
                 </li>
             </ul>

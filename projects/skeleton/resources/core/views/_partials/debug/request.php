@@ -1,4 +1,4 @@
-<div class="row marketing">
+<div class="row marketing well">
 
     <div class="col-lg-4">
 
@@ -10,12 +10,14 @@
 
     <div class="col-lg-8">
 
-        <?php if ( !empty( $_GET ) ): ?>
+        <?php if ( !empty( $_GET ) ) : ?>
 
             <h4>debug :: @get</h4>
             <pre><?php var_dump( $_GET ); ?></pre>
 
-        <?php elseif ( !empty( $_POST ) ): ?>
+        <?php endif; ?>
+
+        <?php if ( !empty( $_POST ) ) : ?>
 
             <h4>debug :: @post</h4>
             <pre><?php var_dump( $_POST ); ?></pre>

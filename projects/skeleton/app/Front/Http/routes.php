@@ -30,19 +30,18 @@ $routes[ 'site/index' ] = $routes[ 'site' ];
  *
  */
 
-$routes[ '@todo' ] = function () {
+$routes[ '@empty' ] = function () {
 
     View::front()->layout( 'header' );
-    View::core()->partials( 'fake/todo' );
+    View::core()->partials( 'fake/empty' );
     View::front()->layout( 'footer' );
 
 };
 
-$routes[ '@debug' ] = function () {
+$routes[ '@todo' ] = function () {
 
     View::front()->layout( 'header' );
-    View::core()->partials( 'fake/debug' );
-    View::core()->partials( 'debug/request' );
+    View::core()->partials( 'fake/todo' );
     View::front()->layout( 'footer' );
 
 };

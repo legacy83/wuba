@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="<?php echo FRONT_URL; ?>/assets/images/favicon.ico">
+    <link rel="icon" href="<?php echo PUBLIC_URL; ?>/assets/images/favicon.ico">
 
     <title>Wuba Front</title>
 

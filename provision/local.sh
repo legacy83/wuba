@@ -62,7 +62,7 @@ echo "RewriteRule ^(.*)$ http://www.$DOMAIN/\$1 [R=301,L]" >> "/var/www/$DOMAIN/
 ###########################################################
 
 rm -rf "/var/www/www.$DOMAIN/public_html"
-ln -s /vagrant/projects/skeleton/public/ "/var/www/www.$DOMAIN/public_html"
+ln -s /vagrant/projects/skeleton/public "/var/www/www.$DOMAIN/public_html"
 
 ###########################################################
 # Wuba Admin Setup

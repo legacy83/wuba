@@ -9,4 +9,4 @@
  */
 
 include __DIR__ . '/../../app/bootstrap.php';
-require_once BACKEND_APP_DIR . '/Http/routes.php';
+require_once APP_DIR . '/Backend/Http/routes.php';

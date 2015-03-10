@@ -41,17 +41,17 @@ final class View
 
     static function core()
     {
-        return new View( CORE_VIEWS_DIR );
+        return new View( RESOURCES_DIR . '/core/views' );
     }
 
     static function front()
     {
-        return new View( FRONT_VIEWS_DIR );
+        return new View( RESOURCES_DIR . '/front/views' );
     }
 
     static function backend()
     {
-        return new View( BACKEND_VIEWS_DIR );
+        return new View( RESOURCES_DIR . '/backend/views' );
     }
 
 }

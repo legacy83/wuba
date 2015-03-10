@@ -2,7 +2,7 @@
     <h1>fake :: @todo</h1>
 </div>
 
-<div class="row marketing">
+<div class="row fake">
 
     <div class="col-lg-6">
 

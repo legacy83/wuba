@@ -1,6 +1,6 @@
 <h1 class="jumbotron">crud :: @todo</h1>
 
-<div class="row">
+<div class="row crud">
 
     <div class="col-lg-12">
 

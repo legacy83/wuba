@@ -7,7 +7,7 @@
             commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     </div>
 
-    <div class="row marketing">
+    <div class="row dashboard">
         <div class="col-lg-6">
             <h4>Subheading</h4>
 

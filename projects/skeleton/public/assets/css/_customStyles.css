@@ -1,0 +1,22 @@
+
+.crud,
+.dashboard,
+.debug,
+.fake,
+.site {
+    margin: 40px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .crud,
+    .dashboard,
+    .debug,
+    .fake,
+    .site {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

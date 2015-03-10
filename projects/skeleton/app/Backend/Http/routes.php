@@ -106,14 +106,6 @@ $routes[ 'bar/destroy' ] = function () {
  *
  */
 
-$routes[ '@empty' ] = function () {
-
-    View::backend()->layout( 'header' );
-    View::core()->partials( 'fake/empty' );
-    View::backend()->layout( 'footer' );
-
-};
-
 $routes[ '@todo' ] = function () {
 
     View::backend()->layout( 'header' );

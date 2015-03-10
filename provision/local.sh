@@ -58,6 +58,20 @@ echo "RewriteCond %{HTTP_HOST} ^$DOMAIN$ [NC]" >> "/var/www/$DOMAIN/public_html/
 echo "RewriteRule ^(.*)$ http://www.$DOMAIN/\$1 [R=301,L]" >> "/var/www/$DOMAIN/public_html/.htaccess"
 
 ###########################################################
+# Wuba Front Setup
+###########################################################
+
+rm -rf "/var/www/www.$DOMAIN/public_html"
+ln -s /vagrant/projects/skeleton/public/ "/var/www/www.$DOMAIN/public_html"
+
+###########################################################
+# Wuba Admin Setup
+###########################################################
+
+rm -rf "/var/www/admin.$DOMAIN/public_html"
+ln -s /vagrant/projects/skeleton/public/backend "/var/www/admin.$DOMAIN/public_html"
+
+###########################################################
 # Apache2 under vagrant user
 ###########################################################
 

@@ -1,6 +1,6 @@
 <h2 class="jumbotron">Show @todo</h2>
 
-<div class="row">
+<div class="row crud">
 
     <div class="col-lg-12">
 

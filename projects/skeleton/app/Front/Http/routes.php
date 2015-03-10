@@ -30,14 +30,6 @@ $routes[ 'site/index' ] = $routes[ 'site' ];
  *
  */
 
-$routes[ '@empty' ] = function () {
-
-    View::front()->layout( 'header' );
-    View::core()->partials( 'fake/empty' );
-    View::front()->layout( 'footer' );
-
-};
-
 $routes[ '@todo' ] = function () {
 
     View::front()->layout( 'header' );

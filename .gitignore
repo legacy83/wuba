@@ -1,9 +1,0 @@
-# IDE Ignores
-# -----------
-
-.idea/*
-
-# Vagrant Ignores
-# ---------------
-
-.vagrant/*

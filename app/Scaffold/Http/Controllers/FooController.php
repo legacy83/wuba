@@ -3,6 +3,7 @@
 namespace Scaffold\Http\Controllers;
 
 use Core\Controller;
+use Core\Helper\Redirect;
 use Core\View;
 
 use Scaffold\Model\Foo;
@@ -33,11 +34,11 @@ class FooController extends Controller
     function create()
     {
         if ( isset( $_POST[ 'createSubmitCreate' ] ) ) {
-            die( 'createSubmitCreate' );
+            Redirect::to( '@foo' );
         }
 
         if ( isset( $_POST[ 'createSubmitCancel' ] ) ) {
-            die( 'createSubmitCancel' );
+            Redirect::to( '@foo' );
         }
 
         echo View::make( 'foo/create' );
@@ -46,11 +47,11 @@ class FooController extends Controller
     function edit()
     {
         if ( isset( $_POST[ 'editSubmitSave' ] ) ) {
-            die( 'createSubmitCreate' );
+            Redirect::to( '@foo' );
         }
 
         if ( isset( $_POST[ 'editSubmitCancel' ] ) ) {
-            die( 'editSubmitCancel' );
+            Redirect::to( '@foo' );
         }
 
         $foo = Foo::buildFromId( $_GET[ 'id' ] );
@@ -63,11 +64,11 @@ class FooController extends Controller
     function destroy()
     {
         if ( isset( $_POST[ 'destroySubmitYes' ] ) ) {
-            die( 'destroySubmitYes' );
+            Redirect::to( '@foo' );
         }
 
         if ( isset( $_POST[ 'destroySubmitNo' ] ) ) {
-            die( 'destroySubmitNo' );
+            Redirect::to( '@foo' );
         }
 
         $foo = Foo::buildFromId( $_GET[ 'id' ] );

@@ -22,11 +22,8 @@ $routes[ 'site/index' ] = $routes[ 'site' ];
  * @todo_ routes
  */
 
-$routes[ '@todo' ] = function () {
-
-    echo 'routes::@todo';
-
-};
+$toDoController = new \Scaffold\Http\Controllers\ToDoController();
+$routes[ '@todo' ] = $toDoController;
 
 /*
  * @foo_ routes

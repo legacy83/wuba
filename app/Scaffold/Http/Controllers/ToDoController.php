@@ -2,8 +2,8 @@
 
 namespace Scaffold\Http\Controllers;
 
-use Core\Routing\Controller;
-use Core\View\View;
+use App\Core\Controller;
+use App\Core\View;
 
 class ToDoController extends Controller
 {

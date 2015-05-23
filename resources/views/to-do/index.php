@@ -1,4 +1,4 @@
-<?= \Core\View\View::layout( 'header' ); ?>
+<?= \App\Core\View::layout( 'header' ); ?>
 
     <div class="page-header">
         <h1>@todo</h1>
@@ -24,4 +24,4 @@
 
     </div>
 
-<?= \Core\View\View::layout( 'footer' ); ?>
+<?= \App\Core\View::layout( 'footer' ); ?>

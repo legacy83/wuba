@@ -2,8 +2,8 @@
 
 namespace Scaffold\Http\Controllers;
 
-use App\Core\Controller;
-use App\Core\View;
+use Core\Controller;
+use Core\View;
 
 class FooController extends Controller
 {

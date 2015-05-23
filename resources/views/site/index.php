@@ -1,4 +1,4 @@
-<?= \App\Core\View::layout( 'header' ); ?>
+<?= \Core\View::layout( 'header' ); ?>
 
     <div class="jumbotron">
 
@@ -47,4 +47,4 @@
 
     </div>
 
-<?= \App\Core\View::layout( 'footer' ); ?>
+<?= \Core\View::layout( 'footer' ); ?>

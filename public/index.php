@@ -9,7 +9,7 @@ ini_set( 'display_errors', 1 );
 
 require __DIR__ . '/../app/bootstrap.php';
 
-( new \App\Core\Route( array_merge(
+( new \Core\Route( array_merge(
     require APP_DIR . '/App/Http/routes.php',
     require APP_DIR . '/Scaffold/Http/routes.php'
 ) ) )->apply();

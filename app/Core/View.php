@@ -52,5 +52,4 @@ final class View
 
         return $view->render();
     }
-
 }

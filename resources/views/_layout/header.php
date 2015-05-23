@@ -18,16 +18,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand brand" href="<?= PUBLIC_URL; ?>">Wuba</a>
+            <a class="navbar-brand brand" href="<?= \Core\Helper\Url::home(); ?>">Wuba</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?= PUBLIC_URL; ?>">Home</a></li>
-                <li><a href="<?= PUBLIC_URL; ?>?r=@todo">About</a></li>
+                <li class="active"><a href="<?= \Core\Helper\Url::to( 'site' ); ?>">Home</a></li>
+                <li><a href="<?= \Core\Helper\Url::to( '@todo' ); ?>">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?= PUBLIC_URL; ?>?r=@todo">@todo</a></li>
-                <li><a href="<?= PUBLIC_URL; ?>?r=@foo">@foo</a></li>
+                <li><a href="<?= \Core\Helper\Url::to( '@todo' ); ?>">@todo</a></li>
+                <li><a href="<?= \Core\Helper\Url::to( '@foo' ); ?>">@foo</a></li>
             </ul>
         </div>
     </div>

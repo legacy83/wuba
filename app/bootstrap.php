@@ -16,6 +16,12 @@ define( 'VENDOR_DIR', "$appDir/../vendor" );
 define( 'PUBLIC_URL', "//$appUrl" );
 
 /*
+ * Start the session
+ */
+
+session_start();
+
+/*
  * The Composer Autoloader
  */
 

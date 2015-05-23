@@ -34,3 +34,5 @@
 </nav>
 
 <div class="container">
+
+    <?= \Core\View::partials( 'flash-messages' ); ?>

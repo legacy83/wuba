@@ -3,8 +3,10 @@
 namespace Scaffold\Http\Controllers;
 
 use Core\Controller;
-use Core\Helper\Redirect;
 use Core\View;
+
+use Core\Helper\Flash;
+use Core\Helper\Redirect;
 
 use Scaffold\Model\Foo;
 
@@ -34,6 +36,7 @@ class FooController extends Controller
     function create()
     {
         if ( isset( $_POST[ 'createSubmitCreate' ] ) ) {
+            Flash::success()->add( '@foo created successfully' );
             Redirect::to( '@foo' );
         }
 

@@ -1,0 +1,7 @@
+{
+  "name": "trsenna/wuba",
+  "description": "Just one more custom PHP starter application",
+  "require": {
+    "php": ">=5.5.9"
+  }
+}

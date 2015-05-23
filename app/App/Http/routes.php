@@ -1,43 +1,14 @@
 <?php
 
-/*
- * routes
- */
-
 $routes = [ ];
+$controller = NULL;
 
 /*
- * site routes
+ * site routing
  */
 
-$routes[ 'site' ] = function () {
+$controller = new \App\Http\Controllers\SiteController();
+$routes[ 'site' ] = $controller;
+$routes[ 'site/index' ] = $controller;
 
-    echo \Core\View\View::make( 'site/index' );
-
-};
-
-$routes[ 'site/index' ] = $routes[ 'site' ];
-
-/*
- * @todo_ routes
- */
-
-$toDoController = new \Scaffold\Http\Controllers\ToDoController();
-$routes[ '@todo' ] = $toDoController;
-
-/*
- * @foo_ routes
- */
-
-$routes[ '@foo' ] = function () {
-
-    echo 'routes::@foo';
-
-};
-
-
-/*
- * just apply the routing
- */
-
-( new \Core\Routing\Route( $routes ) )->apply();
+return $routes;

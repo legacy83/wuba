@@ -17,6 +17,13 @@ class Controller
                 $this->$action();
             }
 
+        } else {
+
+            $defaultAction = 'index';
+            if ( method_exists( $this, $defaultAction ) ) {
+                $this->$defaultAction();
+            }
+
         }
     }
 }

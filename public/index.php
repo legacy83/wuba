@@ -8,4 +8,8 @@ ini_set( 'display_errors', 1 );
  */
 
 require __DIR__ . '/../app/bootstrap.php';
-require_once APP_DIR . '/App/Http/routes.php';
+
+( new \Core\Routing\Route( array_merge(
+    require APP_DIR . '/App/Http/routes.php',
+    require APP_DIR . '/Scaffold/Http/routes.php'
+) ) )->apply();

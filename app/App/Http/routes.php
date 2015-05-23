@@ -12,7 +12,9 @@ $routes = [ ];
 
 $routes[ 'site' ] = function () {
 
-    echo 'routes::site';
+    echo \Core\View\View::make( 'site/index', [
+        'hello' => 'Hello Wuba!!!',
+    ] );
 
 };
 

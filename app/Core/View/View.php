@@ -4,54 +4,53 @@ namespace Core\View;
 
 final class View
 {
+    private $view;
+    private $models;
     private $viewsDir;
 
-    private function __construct( $viewsDir )
+    private function __construct( $view, $models = [ ] )
     {
-        $this->viewsDir = $viewsDir;
+        $this->view = $view;
+        $this->models = $models;
+        $this->viewsDir = RESOURCES_DIR . '/views';
+    }
+
+    private function render()
+    {
+        ob_start();
+
+        extract( $this->models );
+        include( $this->viewsDir . "/{$this->view}.php" );
+
+        return trim( ob_get_clean() );
     }
 
     /*
-     * View Functionality
-     * ------------------
-     *
+     * static functionality
      */
 
-    function make( $view, $models = array() )
+    static function make( $view, $models = array() )
     {
-        extract( $models );
-        include( $this->viewsDir . "/$view.php" );
+        $view = new View( $view, $models );
+        $view->viewsDir = RESOURCES_DIR . '/views';
+
+        return $view->render();
     }
 
-    function layout( $layout, $models = array() )
+    static function layout( $view, $models = array() )
     {
-        $this->make( "/_layout/$layout", $models );
+        $view = new View( $view, $models );
+        $view->viewsDir = RESOURCES_DIR . '/views/_layout';
+
+        return $view->render();
     }
 
-    function partials( $partial, $models = array() )
+    static function partials( $view, $models = array() )
     {
-        $this->make( "/_partials/$partial", $models );
-    }
+        $view = new View( $view, $models );
+        $view->viewsDir = RESOURCES_DIR . '/views/_layout';
 
-    /*
-     * View Static Factories
-     * ---------------------
-     *
-     */
-
-    static function core()
-    {
-        return new View( RESOURCES_DIR . '/core/views' );
-    }
-
-    static function front()
-    {
-        return new View( RESOURCES_DIR . '/front/views' );
-    }
-
-    static function backend()
-    {
-        return new View( RESOURCES_DIR . '/backend/views' );
+        return $view->render();
     }
 
 }

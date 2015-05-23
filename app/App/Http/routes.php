@@ -1,27 +1,46 @@
 <?php
 
 /*
- * Routes
+ * routes
  */
 
 $routes = [ ];
 
 /*
- * Site Routes
+ * site routes
  */
 
 $routes[ 'site' ] = function () {
 
-    echo \Core\View\View::make( 'site/index', [
-        'hello' => 'Hello Wuba!!!',
-    ] );
+    echo \Core\View\View::make( 'site/index' );
 
 };
 
 $routes[ 'site/index' ] = $routes[ 'site' ];
 
 /*
- * Just apply the routing
+ * @todo_ routes
+ */
+
+$routes[ '@todo' ] = function () {
+
+    echo 'routes::@todo';
+
+};
+
+/*
+ * @foo_ routes
+ */
+
+$routes[ '@foo' ] = function () {
+
+    echo 'routes::@foo';
+
+};
+
+
+/*
+ * just apply the routing
  */
 
 ( new \Core\Routing\Route( $routes ) )->apply();

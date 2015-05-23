@@ -35,4 +35,4 @@
 
 <div class="container">
 
-    <?= \Core\View::partials( 'flash-messages' ); ?>
+<?php include( 'partials/flash-messages.php' ); ?>

@@ -44,12 +44,4 @@ final class View
 
         return $view->render();
     }
-
-    static function partials( $view, $models = array() )
-    {
-        $view = new View( $view, $models );
-        $view->viewsDir = RESOURCES_DIR . '/views/_partials';
-
-        return $view->render();
-    }
 }

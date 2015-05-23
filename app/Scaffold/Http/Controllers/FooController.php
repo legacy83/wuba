@@ -50,6 +50,7 @@ class FooController extends Controller
     function edit()
     {
         if ( isset( $_POST[ 'editSubmitSave' ] ) ) {
+            Flash::success()->add( '@foo modified successfully' );
             Redirect::to( '@foo' );
         }
 
@@ -67,6 +68,7 @@ class FooController extends Controller
     function destroy()
     {
         if ( isset( $_POST[ 'destroySubmitYes' ] ) ) {
+            Flash::success()->add( '@foo destroyed successfully' );
             Redirect::to( '@foo' );
         }
 

@@ -5,7 +5,7 @@
  */
 
 $appDir = __DIR__;
-$appUrl = 'www.192.168.27.14.xip.io';
+$appUrl = "{$_SERVER[ 'SERVER_NAME' ]}{$_SERVER[ 'SCRIPT_NAME' ]}";
 
 define( 'APP_DIR', $appDir );
 define( 'CONFIG_DIR', "$appDir/../config" );
@@ -13,7 +13,7 @@ define( 'PUBLIC_DIR', "$appDir/../public" );
 define( 'RESOURCES_DIR', "$appDir/../resources" );
 define( 'VENDOR_DIR', "$appDir/../vendor" );
 
-define( 'PUBLIC_URL', "//$appUrl" );
+define( 'PUBLIC_URL', htmlentities( dirname( "//$appUrl" ) ) );
 
 /*
  * Start the session

@@ -9,7 +9,7 @@ abstract class Redirect
         $url = PUBLIC_URL;
         $query = http_build_query( array_merge( [ 'r' => $r ], $params ) );
 
-        header( "location:$url?$query" );
+        header( "location:$url/index.php?$query" );
         die();
     }
 }

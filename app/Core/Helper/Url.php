@@ -9,7 +9,7 @@ abstract class Url
         $url = PUBLIC_URL;
         $query = http_build_query( array_merge( [ 'r' => $r ], $params ) );
 
-        return "$url?$query";
+        return "$url/index.php?$query";
     }
 
     static function home()

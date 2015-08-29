@@ -19,7 +19,7 @@ echo "$apache2AddVhost" | bash -s "www.$domain"
 echo "$apache2Add301Redirect" | bash -s "$domain" "www.$domain"
 
 ##########################################
-# Wuba Project Setup
+# App Project Setup
 ##########################################
 
 echo "$mySQLCreateDB" | bash -s "wuba"

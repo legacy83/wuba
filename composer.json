@@ -1,6 +1,6 @@
 {
   "name": "trsenna/wuba",
-  "description": "Just one more custom PHP starter application",
+  "description": "Wuba Project Template is a skeleton PHP application best for rapidly creating amazing and well done projects.",
   "require": {
     "php": ">=5.5.9"
   }

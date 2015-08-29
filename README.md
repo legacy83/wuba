@@ -1,2 +1,2 @@
 # wuba
-Just one more custom PHP starter application
+Wuba Project Template is a skeleton PHP application best for rapidly creating amazing and well done projects.

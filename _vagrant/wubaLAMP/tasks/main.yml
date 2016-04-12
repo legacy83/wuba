@@ -1,0 +1,6 @@
+---
+# tasks file for wubaLAMP
+
+- include: mainApache2.yml
+- include: mainMySQL.yml
+- include: mainPHP.yml

@@ -1,0 +1,5 @@
+---
+# handlers file for wubaLAMP
+
+- name: apache2 | restart
+  service: name=apache2 state=restarted

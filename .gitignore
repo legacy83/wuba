@@ -1,12 +1,11 @@
-# - IDE Ignores
-# -----------------------------------------
-.idea
+# PhpStorm
+.idea/*
 
-# - Composer Ignores
-# -----------------------------------------
+# Vagrant
+.vagrant
+
+# Ansible
+playbook.retry
+
+# Vendor (e.g. Composer)
 vendor
-composer.lock
-
-# - OS Ignores
-# -----------------------------------------
-.DS_Store

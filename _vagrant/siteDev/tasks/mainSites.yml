@@ -1,0 +1,51 @@
+---
+# tasks file for siteDev | Sites
+
+- name: Sites | Public Html Directory
+  file:
+    path: "/var/www/{{ item }}/public_html"
+    state: directory
+  with_items:
+    - 192.168.27.14.xip.io
+
+- name: Sites | Logs Directory
+  file:
+    path: "/var/www/{{ item }}/logs"
+    state: directory
+  with_items:
+    - 192.168.27.14.xip.io
+    - www.192.168.27.14.xip.io
+
+- name: Sites | Available Conf
+  copy:
+    src: "sites-available/{{ item }}.conf"
+    dest: /etc/apache2/sites-available
+    owner: root
+    group: root
+    mode: 0644
+    force: yes
+  with_items:
+    - 192.168.27.14.xip.io
+    - www.192.168.27.14.xip.io
+
+- name: Sites | Enabled Conf
+  file:
+    src: "/etc/apache2/sites-available/{{ item }}.conf"
+    dest: "/etc/apache2/sites-enabled/{{ item }}.conf"
+    state: link
+  with_items:
+    - 192.168.27.14.xip.io
+    - www.192.168.27.14.xip.io
+  notify:
+    - apache2 | restart
+
+- name: Sites | 301 Redirect
+  copy:
+    src: 192.168.27.14.xip.io_htaccess
+    dest: /var/www/192.168.27.14.xip.io/public_html/.htaccess
+
+- name: Sites | Link WordPress Application
+  file:
+    src: /vagrant/www
+    dest: /var/www/www.192.168.27.14.xip.io/public_html
+    state: link

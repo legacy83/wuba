@@ -1,0 +1,12 @@
+---
+# tasks file for wubaCore
+
+- name: APT Repository Management
+  apt: "name={{ item }} state=present"
+  with_items:
+    - python-apt
+    - python-pycurl
+
+- include: mainSystemLocale.yml
+- include: mainSystemTimezone.yml
+- include: mainGoodStuff.yml

@@ -1,0 +1,13 @@
+---
+# tasks file for wubaCore | systemTimezone
+
+- name: System Timezone | Copy Files
+  copy:
+    src: timezone
+    dest: /etc/timezone
+    owner: root
+    group: root
+    mode: 0644
+    force: yes
+  notify:
+    - system timezone | reconfigure

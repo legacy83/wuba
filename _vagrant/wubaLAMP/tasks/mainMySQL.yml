@@ -1,0 +1,25 @@
+---
+# tasks file for wubaLAMP | mySQL
+
+- name: MySQL | Already Installed?
+  stat: path=/user/bin/mysql
+  register: mysql_already_installed
+
+- name: MySQL | DebConf Selections For Root Password
+  debconf: name=mysql-server question={{ item }} vtype=password value=root@secret
+  with_items:
+    - mysql-server/root_password
+    - mysql-server/root_password_again
+  when: mysql_already_installed == False
+
+- name: MySQL | Minimal
+  apt: "name={{ item }} state=present"
+  with_items:
+    - mysql-server
+    - python-mysqldb
+
+- name: MySQL | Service Start
+  service: name=mysql state=started enabled=yes
+
+- name:  MySQL | No Test Database
+  mysql_db: name='test' state=absent

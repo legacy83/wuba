@@ -1,0 +1,32 @@
+---
+# tasks file for wubaLAMP | apache2
+
+- name: Apache2 | Minimal
+  apt: "name={{ item }} state=present"
+  with_items:
+    - apache2
+
+- name: Apache2 | Service Start
+  service: name=apache2 state=started enabled=yes
+
+- name: Apache2 | Copy FQDN File
+  copy:
+    src: fqdn.conf
+    dest: /etc/apache2/conf-available
+    owner: root
+    group: root
+    mode: 0644
+    force: yes
+
+- name: Apache2 | Enable FQDN Conf
+  file: 
+    src: /etc/apache2/conf-available/fqdn.conf
+    dest: /etc/apache2/conf-enabled/fqdn.conf
+    state: link
+  notify:
+    - apache2 | restart
+
+- name: Apache2 | Enable Rewrite
+  apache2_module: name=rewrite state=present
+  notify: 
+    - apache2 | restart

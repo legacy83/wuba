@@ -1,0 +1,39 @@
+---
+# tasks file for siteDev | Setup
+
+# Setup | configure current MySQL instance
+# ----------------------------------------
+
+- name: Setup | MySQL Users
+  mysql_user: name=wuba password=wuba@secret priv=*.*:ALL state=present
+
+- name: Setup | MySQL Databases
+  mysql_db: name=wuba state=present
+
+# Setup | build and make the application available
+# ------------------------------------------------
+
+- name: Setup | Composer Install
+  composer: command=install working_dir=/vagrant
+  become_user: vagrant
+
+# Setup | apache2 under vagrant user/group
+# ----------------------------------------
+
+- name: "Setup | Apache2 Under Vagrant User"
+  lineinfile:
+    dest: "/etc/apache2/envvars"
+    regexp: "^export APACHE_RUN_USER="
+    line: "export APACHE_RUN_USER=vagrant"
+    state: present
+  notify:
+    - apache2 | restart
+
+- name: "Setup | Apache2 Under Vagrant Group"
+  lineinfile:
+    dest: "/etc/apache2/envvars"
+    regexp: "^export APACHE_RUN_GROUP="
+    line: "export APACHE_RUN_GROUP=vagrant"
+    state: present
+  notify:
+    - apache2 | restart

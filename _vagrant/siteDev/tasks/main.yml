@@ -1,0 +1,5 @@
+---
+# tasks file for siteDev
+
+- include: mainSetup.yml
+- include: mainSites.yml

@@ -1,0 +1,35 @@
+---
+# tasks file for wubaCore | goodStuff
+
+- name: Good Stuff | Database
+  apt: "name={{ item }} state=present"
+  with_items:
+    - sqlite
+
+- name: Good Stuff | Retrieving Files
+  apt: "name={{ item }} state=present"
+  with_items:
+    - curl
+    - wget
+
+- name: Good Stuff | Version Control
+  apt: "name={{ item }} state=present"
+  with_items:
+    - git-core
+    - subversion
+
+- name: Good Stuff | Zip Utility
+  apt: "name={{ item }} state=present"
+  with_items:
+    - zip
+    - unzip
+
+- name: Good Stuff | Other Tools
+  apt: "name={{ item }} state=present"
+  with_items:
+    - imagemagick
+    - ngrep
+    - colordiff
+    - gettext
+    - graphviz
+    - dos2unix

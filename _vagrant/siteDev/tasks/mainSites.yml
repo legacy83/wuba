@@ -44,8 +44,8 @@
     src: 192.168.27.14.xip.io_htaccess
     dest: /var/www/192.168.27.14.xip.io/public_html/.htaccess
 
-- name: Sites | Link WordPress Application
+- name: Sites | Link Application
   file:
-    src: /vagrant/www
+    src: /vagrant/public
     dest: /var/www/www.192.168.27.14.xip.io/public_html
     state: link
